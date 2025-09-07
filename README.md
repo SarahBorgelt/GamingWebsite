@@ -10,7 +10,7 @@ It was created to practice front-end development and showcase interactive web fe
 
 ## Live Demo
 The project is hosted on GitHub Pages:  
-[View the Website](https://SarahBorgelt.github.io/my-website/)  
+[View the Website](https://sarahborgelt.github.io/GamingWebsite/)  
 
 
 ## Installation & Setup
