@@ -1,0 +1,656 @@
+/* Number guess game styling begins here */
+
+.randomNumber {
+     font-family: Garamond, sans-serif;
+     background-color: aqua;
+}
+
+button.randomNumberGame {
+     background: linear-gradient(to bottom, #87cefa, #4682b4); 
+     color: white;                
+     cursor: pointer;
+     border-radius: 15px;         
+     border: none;                
+     padding: 10px 10px;          
+     font-size: 1rem;
+     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+     margin-top: 15px;
+}
+
+button.randomNumberGame:hover {
+     background: linear-gradient(to bottom, #5d9cec, #3b7ddd);
+     transform: translateY(-2px); 
+}
+
+input { 
+     background-color: #f0f8ff; 
+     width: 120px; 
+     height: 35px; 
+     border: none;
+     border-radius: 5px; 
+     padding: 5px;
+     color: black;
+     padding: 5px 10px;
+     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+     transition: box-shadow 0.2s, transform 0.2s;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+}
+
+#random-number-game-area {
+     position: relative;
+     width: 500px;
+     height: 200px;
+     background: linear-gradient(to top, #3399ff 70%, #ccf 100%);
+     overflow: hidden;
+     margin-top: 20px;
+     border-radius: 15px;
+}
+
+.starting-area{
+     position: absolute;
+     bottom: 40px;
+     left: 10px;;
+     width: 70px;
+     height: 35px;
+     background: #fff;
+     box-shadow: 0 0 5px #0003;
+     background: radial-gradient(circle at 50% 40%, #ffffff, #d0eaff);
+     border-radius: 50% / 40%;
+     box-shadow:
+          0 2px 8px rgba(0, 0, 0, 0.2),
+          inset 0 1px 2px rgba(255, 255, 255, 0.6);
+     border: 2px solid #cce6ff;
+     z-index: 2;
+}
+
+.ice-step1, .ice-step2, .ice-step3 {
+     position: absolute;
+     bottom: 40px;
+     width: 70px;
+     height: 35px;
+     background: radial-gradient(circle at 50% 40%, #ffffff, #d0eaff);
+     border-radius: 50% / 40%;
+     box-shadow: 0 2px 8px rgba(255, 255, 255, 0.6), inset 0 1px 2px rgba(255,255,255,0.6);
+     border: 2px solid #cce6ff;
+     z-index: 1;
+}
+
+.ice-step1 {
+     left: 130px;
+}
+
+.ice-step2 {
+     left: 240px;
+}
+
+.ice-step3 {
+     left: 350px;
+     bottom: 40px;
+     width: 200px;
+     height: 50px;
+     background: linear-gradient(to top, #ffffff, #e0f7ff 50%, #ffffff);
+     border-radius: 10px;
+     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.8), inset 0 2px 4px rgba(255,255,255,0.8);
+     border: 2px solid #e6f2ff;
+     z-index: 1;
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+
+#penguin {
+     position: absolute;
+     width: 40px;
+     height: 40px;
+     background-image: url('numberGuessing/penguin.png');
+     background-size: contain;
+     background-repeat: no-repeat;
+     bottom: 50px;
+     left: 25px;
+     transition: all 0.6s ease;
+     z-index: 3;
+}
+
+.fall {
+     animation: fall 0.8s ease forwards;
+}
+
+@keyframes fall {
+     to {
+          transform: translateY(100px) rotate(720deg);
+          opacity: 0;
+     }
+}
+
+.flag-pole {
+     width: 8px;
+     height: 40px;
+     background-color: #333;
+     position: absolute;
+     left: 60%;
+     bottom: 100%;
+     display: flex;
+}
+
+.flag{
+     background-color: red;
+     width: 30px;
+     height: 15px;
+     position: absolute;
+     right: 100%;
+     top: 0;
+}
+
+html.randomNumber .navbar {
+     background: linear-gradient(to bottom, #87cefa, #4682b4);
+     border-radius: 0 15px 15px 0;  
+     position: fixed;
+     top: 10%;
+     left: 0;
+     width: 200px;                 
+     padding: 20px 15px;
+     box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+     height: 100vh;
+}
+
+html.randomNumber .navbar ul {
+     list-style: none;
+     padding: 0;
+     margin: 20px 0 0 0;
+}
+
+html.randomNumber .navbar li {
+     margin: 15px 0;
+}
+
+html.randomNumber .navbar a {
+     color: white;
+     text-decoration: none;
+     padding: 8px 12px;
+     border-radius: 8px;
+     display: block;
+}
+
+html.randomNumber .navbar a:hover {
+     background-color: #5d9cec;
+}
+
+html.randomNumber body { 
+     display: flex; 
+     flex-direction: row; 
+     height: 100%; 
+     margin: 0;
+     font-family: Garamond, sans-serif;
+}
+
+.number-guessing-game {
+     flex: 1;
+     margin-left: 220px;
+     padding: 30px;
+     min-height: calc(100vh - 100px);
+     background-color: #f0f8ff;
+     border-radius: 15px;
+     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+html.randomNumber footer {
+     background-color: darkblue;
+     color: white;                 
+     text-align: center;           
+     padding: 15px 20px;           
+     border-radius: 15px;           
+     font-size: 0.9rem;
+     position: fixed;
+     bottom: 10px;
+     left: 55%;
+     transform: translateX(-50%);
+     width: 60%;
+     z-index: 100;
+}
+
+html.randomNumber .content-area {
+     display: flex;
+     flex-direction: column;
+     flex: 1;
+     margin-left: 220px;
+}
+
+.guess-container, .game-container {
+     display: flex;                
+     justify-content: center;      
+     align-items: center;          
+     gap: 10px;                    
+     margin: 20px 0;               
+}
+
+html.randomNumber h1, html.randomNumber h2, html.randomNumber p{
+     text-align: center;
+}
+
+html.randomNumber .navbar p {
+     font-weight: bold;
+     text-align: center;
+     color: white;
+     text-decoration: underline;
+}
+
+/* Fortune teller game styling begins here */ 
+
+button.fortune-teller-game {
+     background-color: black;
+     color: white;
+     padding: 0; 
+     border-radius: 10%;
+     font-size: 16px;
+     cursor: pointer;
+     padding: 10px 20px;
+}
+
+#fortune-name {
+     font-size: 20px;
+     color: black;
+}
+
+.fortune-teller-body {
+     background: purple;
+     padding-bottom: 300px;
+}
+
+.fortune-teller-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-start;
+     position: relative;
+     height: 100%;
+     color: white;
+     font-size: 18px;
+     font-family: Garamond, sans-serif;
+     text-align: center;
+}
+
+.fortune-teller-game {
+     text-align: center;
+}
+
+.speech-bubble {
+     position: relative;
+     max-width: 80%;
+     width: 300px;
+     padding: 10px 15px;
+     background-color: #fff;
+     border-radius: 15px;
+     font-family: Garamond, sans-serif;
+     font-size: 16px;
+     text-align: center;
+     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+     z-index: 5;
+     height: auto;
+     color: black;
+     margin-bottom: 40px;
+}
+
+.fortune-speech-circle1, .fortune-speech-circle2 {
+     width: 40px;
+     height: 40px;
+     background-color: #fff;
+     border-radius: 50%;
+     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.fortune-speech-circle1 {
+     margin-top: 5%;
+     position: relative;
+     left: 15%;
+}
+
+.fortune-speech-circle2 {
+     margin-top: 8%;
+     position: relative;
+     left: 20%;
+}
+
+.speech-bubble::after{
+     content: '';
+     position: absolute;;
+     bottom: -10px;
+     left: 50%;
+     margin-left: -10px;
+     border-width: 10px;
+     border-style: solid;
+     border-color: #fff transparent transparent transparent;
+}
+
+@media screen and (max-width: 600px) {
+     .speech-bubble {
+          font-size: 14px;
+          width: 90%;
+          padding: 10px;
+     }
+
+     .fortune-speech-circle1,
+     .fortune-speech-circle2 {
+          width: 30px;
+          height: 30px;
+     }
+}
+
+img.fortune-image {
+     position: absolute;;
+     top: 80%;
+     left: 45%;
+     align-items: center;
+     height: 100%;
+}
+
+html.fortuneTeller .navbar {
+     background-color: lightskyblue;
+     border-radius: 15px;
+     position: fixed;
+     top: 10%;
+     left: 1%;
+     max-width: 80%;
+     text-align: left;
+     padding: 5px 15px;
+}
+
+html.fortuneTeller .navbar ul, html.fortuneTeller .navbar a {
+     list-style-type: none;
+     text-decoration: none;
+     padding: 0;
+     margin: 0 0 30px 0;
+}
+
+html.fortuneTeller .navbar p {
+     font-weight: bold;
+     text-align: center;
+}
+
+html.fortuneTeller #name {
+     display: block;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
+     margin: 10px auto;
+}
+
+html.fortuneTeller footer {
+     background-color: lightskyblue;
+     color: black;
+     text-align: center;
+     padding: 15px 20px;
+     border-radius: 15px;
+     font-size: 0.9rem;
+     width: 60%;
+     margin: 200px auto 0 auto;
+     flex-shrink: 0;
+}
+
+/* homepage stlying begins here  */
+html.homepage {
+     background-color: lightskyblue;
+}
+
+html.homepage .navbar {
+     background-color:darkblue;
+     color: white;
+     border-radius: 15px;
+     padding: 5px;
+     margin: auto auto;
+     max-width: 25%;
+}
+
+html.homepage .navbar a {
+     display: inline-block;
+     color: white;
+     margin: 5px 10px;
+     text-decoration: none;
+}
+
+html.homepage img {
+     border-radius: 15px;
+     padding: 10px;
+     display: block;
+     margin: 0 auto;
+     max-width: 100%;
+     height: auto;
+}
+
+html.homepage p {
+     text-align: center;
+}
+
+html.homepage h1 {
+     text-align: center;
+     margin: 0;                    /* Remove default margin */
+     font-size: 2.5rem;            /* Larger title */
+     font-family: 'Segoe UI', sans-serif; /* Cleaner font */
+     letter-spacing: 1px;
+}
+
+html.homepage footer {
+     background-color: darkblue;
+     color: white;                 
+     text-align: center;           
+     padding: 15px 20px;           
+     border-radius: 15px; 
+     margin-top: 40px;            
+     font-size: 0.9rem;
+}
+
+/* About me styling begins here */
+html.about-me .navbar {
+     position: fixed;
+     top: 10%;
+     left: 0;
+     width: 220px;
+     height: 80%;
+     background: #ffcc99;
+     padding: 20px;
+     border-radius: 0 15px 15px 0;
+     box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+     transition: transform 0.3s ease;
+}
+
+html.about-me .navbar p {
+     text-align: center;
+     font-weight: bold;
+     color: #5c2a00;
+     margin-bottom: 15px;
+}
+
+html.about-me .navbar ul {
+     list-style: none;
+     padding: 0;
+}
+
+html.about-me .navbar li {
+     margin: 12px 0;
+}
+
+html.about-me .navbar a {
+     color: #5c2a00;
+     text-decoration: none;
+     font-weight: 600;
+     padding: 8px 12px;
+     border-radius: 8px;
+     display: block;
+}
+
+html.about-me .content-area {
+     margin-left: 240px;
+     padding: 30px;
+}
+
+html.about-me .navbar a:hover {
+     background-color: #ffd1a4;
+}
+
+html.about-me h1 {
+     text-align: center;
+     text-decoration: underline;
+}
+
+html.about-me {
+     background-color: #fff5e6;
+}
+
+@media screen and (max-width: 768px) {
+     html.about-me .navbar {
+          width: 150px;
+          padding: 15px;
+     }
+
+     html.about-me .content-area {
+          margin-left: 160px;
+          padding: 15px;
+     }
+}
+
+html.about-me footer {
+     background-color: #ffd1a4;
+     color: #5c2a00;
+     text-align: center;
+     padding: 15px 20px;
+     border-radius: 15px;
+     font-size: 0.9rem;
+     width: 60%;
+     margin: 20px auto 0 auto;
+     flex-shrink: 0;
+}
+
+html.about-me img {
+     border-radius: 30px;
+     padding: 10px;
+     display: block;
+     margin: 0 auto;
+     max-width: 50%;
+     height: auto;
+}
+
+/* Contact form styling begins here */
+
+html.contact-page .navbar {
+     position: fixed;
+     top: 10%;
+     left: 0;
+     width: 220px;
+     height: 80%;
+     background-color: #ffcc99;
+     padding: 20px;
+     border-radius: 0 15px 15px 0;
+     box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+     transition: transform 0.3s ease;
+     z-index: 100;
+}
+
+html.contact-page .navbar p {
+     text-align: center;
+     font-weight: bold;
+     color: #5c2a00;
+     margin-bottom: 15px;
+}
+
+html.contact-page .navbar ul {
+     list-style: none;
+     padding: 0;
+}
+
+html.contact-page .navbar li {
+     margin: 12px 0;
+}
+
+html.contact-page .navbar a {
+     color: #5c2a00;
+     text-decoration: none;
+     font-weight: 600;
+     padding: 8px 12px;
+     border-radius: 8px;
+     display: block;
+}
+
+html.contact-page .navbar a:hover {
+     background-color: #ffd1a4;
+}
+
+html.contact-page .contact-container {
+     margin-left: 300px; 
+}
+
+/* Responsive: sidebar collapses on smaller screens */
+@media screen and (max-width: 768px) {
+     html.contact-page .navbar {
+          width: 180px;
+          padding: 15px;
+     }
+
+     html.contact-page .contact-container {
+          margin-left: 300px;
+          padding: 15px;
+     }
+}
+
+@media screen and (max-width: 500px) {
+     html.contact-page .navbar {
+          position: relative;
+          width: 100%;
+          height: auto;
+          border-radius: 0;
+     }
+
+     html.contact-page .contact-container {
+          margin-left: 0;
+          padding: 20px;
+     }
+}
+
+.italicize {
+     font-style: italic;
+}
+
+html.contact-page .contact-container form label {
+     display: inline-block;
+     width: 100px; /* aligns Name and Email labels with their inputs */
+     text-align: right;
+     margin-right: 20px;
+}
+
+html.contact-page .contact-container form input,
+html.contact-page .contact-container form textarea {
+     display: block;
+     width: 70%;
+     padding: 10px 12px;
+     margin-bottom: 20px;
+     border-radius: 10px;
+     border: 1px solid #d9a066;
+     font-size: 16px;
+     font-family: Garamond, serif;
+     transition: all 0.2s ease-in-out;
+}
+
+html.contact-page .contact-container form input:focus,
+html.contact-page .contact-container form textarea:focus {
+     outline: none;
+     border-color: #feac32;
+     box-shadow: 0 0 8px rgba(254, 172, 50, 0.4);
+}
+
+html.contact-page {
+     background-color: #fff5e6;
+}
+
+html.contact-page footer {
+     background-color: #ffd1a4;
+     color: #5c2a00;
+     text-align: center;
+     padding: 15px 20px;
+     border-radius: 15px;
+     font-size: 0.9rem;
+     width: 60%;
+     margin: 173px auto 0 auto;
+     flex-shrink: 0;
+}
+

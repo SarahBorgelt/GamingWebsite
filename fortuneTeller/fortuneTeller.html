@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="fortuneTeller">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Fortune Teller</title>
+     <link rel="stylesheet" href="/style.css">
+</head>
+<body class="fortune-teller-body">
+     <div class="content-area fortune-teller-game">
+     <div class="navbar">
+     <nav>
+          <p>Menu</p>
+          <ul>
+               <li><a href="/index.html">Homepage</a></li>
+               <li><a href="/numberGuessing/random.Number.html">Random Number</a></li>
+               <li><a href="/rockPaperScissors/rockPaperScissors.html">Rock Paper Scissors</a></li>
+               <li><a href="/about.html">About Me</a></li>
+               <li><a href="/contact.html">Contact</a></li>
+          </ul>
+     </nav>
+     </div>
+     <h1>Welcome To My Mysterious Tent!</h1>
+     <p id="fortune-name">What is your name?</p>
+     <input id="name" class = "name" type="text" placeholder="Enter your name here">
+     <button class="submit fortune-teller-game">Submit</button>
+     </div>
+     <div class="fortune-teller-container">
+          <div class="fortune-teller-text">
+               <p class="fortune-teller-message">Your fortune will be revealed soon...</p>
+               <div class="speech-bubble" id="speechBubble"></div>
+               <div class="fortune-speech-circle1"></div>
+               <div class="fortune-speech-circle2"></div>
+               <div class="fortune-teller-image">
+               <img class="fortune-image" src="/fortuneTeller/fortuneTeller.png" alt="Fortune Teller">
+               </div>
+          </div>
+     </div>
+     <script src="/fortuneTeller/fortuneTeller.js"></script>
+     <footer>  
+          <p>&copy; 2025 Gaming Girl Website. All rights reserved.</p>
+     </footer>
+</body>
+</html>

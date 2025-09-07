@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" class="randomNumber">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Random Number</title>
+     <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="content-area number-guessing-game">
+       <div class="navbar">
+          <nav>
+          <p>Menu</p>
+          <ul>
+               <li><a href="/index.html">Homepage</a></li>
+               <li><a href="/fortuneTeller/fortuneTeller.html">Fortune Teller</a></li>
+               <li><a href="/rockPaperScissors/rockPaperScissors.html">Rock Paper Scissors</a></li>
+               <li><a href="/about.html">About Me</a></li>
+               <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          </nav>
+     </div>
+     <h1>Welcome to the Random Number Generator</h1>
+     <p>This game generates a random number between 1 and 5. Your goal is to guess which number I am thinking of.</p>
+     <div class="are-you-ready">
+          <h2>Are You Ready?</h2>
+     </div>
+     <p>If so, enter your guess below!</p>
+     <div class="guess-container">
+     <input type="number" id="userGuess" min="1" max="10" placeholder="Enter your guess (1-10)">
+     <button class="randomNumberGame" id="guessButton" onclick="checkGuess()">Check Guess</button>
+     </div>
+     <p id="result"></p>
+     <script src="random.Number.js"></script>
+     <div class="game-container">
+     <div id="random-number-game-area">
+          <div class="starting-area"></div>
+          <div class="ice-step1"></div>
+          <div class="ice-step2"></div>
+          <div class="ice-step3">
+               <div class="flag-pole">
+                    <div class="flag"></div>
+               </div>
+          </div>
+          <div id="penguin"></div> 
+     </div>
+     </div>
+</div>
+     <footer>
+          <p>&copy; 2025 Gaming Girl Website. All rights reserved.</p>
+     </footer>
+</body>
+</html>
