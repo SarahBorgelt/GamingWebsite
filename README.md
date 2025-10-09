@@ -6,7 +6,7 @@ It was created to practice front-end development and showcase interactive web fe
 ## Features
 - **Fortune Teller** – Enter your name to receive a randomly generated fortune.  
 - **Rock, Paper, Scissors** – Play against the computer in the classic game.  
-- **Number Guessing Game** – Guess a number between 1 and 5 and see if you’re correct.  
+- **Number Guessing Game** – Guess a number between 1 and 3 and see if you’re correct.  
 
 ## Live Demo
 The project is hosted on GitHub Pages:  
