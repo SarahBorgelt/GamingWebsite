@@ -1,7 +1,7 @@
 # 🎮 Interactive Games Website  
 ***Fun, engaging browser-based games that showcase interactive web development skills***  
 
-![Screenshot](/Images/RandomNumber.png)
+![This image shows the Random Number Generator game in action!](/Images/RandomNumber.png)
 
 ## 📌 Overview
 
